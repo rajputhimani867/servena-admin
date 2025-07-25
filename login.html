@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servana Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/comman.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="body-color">
+        <div class="navbar-top d-flex justify-content-between align-items-center">
+    <nav class="navbar">
+        <div class="d-flex align-items-center topbar-image">
+          <img src="https://i.pravatar.cc/32" alt="User" />
+            <span class="fw-semibold">Ramesh</span>
+        </div>
+        <input type="text" class="form-control w-50" placeholder="Search by products...">
+        <i class="fas fa-bell"></i>
+    </nav>
+    </div>
+
+    <div class="container form-container">
+        <div class="row w-100">
+            <div class="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
+                <div class="logo-box w-75 text-center">
+                    <img src="assets/images/servanaImg.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <!-- <div class="login-box "> -->
+                       <form id="login-form" class="login-box">
+                     <h4 class="text-center mb-4">Welcome Back</h4>
+                     <label for="username">User Name</label>
+                     <input type="text" class="form-control mb-2" id="username" placeholder="Name">
+                     <label for="password">Password</label>
+                     <input type="password" class="form-control mb-2" id="password" placeholder="Password">
+                     <label for="code">Two-Factor Authentication Code</label>
+                     <input type="text" class="form-control mb-3" id="code" placeholder="Authentication Code">
+                     <button class="btn btn-dark w-100" type="submit">Login</button>
+                     <div class="text-center forgot-password mt-2">
+                       <a href="#">Forgot password?</a>
+                     </div>
+                   </form>
+
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Get values
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const code = document.getElementById('code').value.trim();
+
+    // Check if all fields are filled
+    if (username && password && code) {
+      window.location.href = 'index.html';
+    } else {
+      alert('Please fill in all fields before logging in.');
+    }
+  });
+</script>
+
+</body>
+</html>

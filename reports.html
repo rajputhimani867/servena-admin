@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link rel="stylesheet" href="assets/css/comman.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+     <div class="body-color">
+        <div class="navbar-top d-flex justify-content-between align-items-center">
+    <nav class="navbar">
+        <div class="d-flex align-items-center topbar-image">
+          <img src="https://i.pravatar.cc/32" alt="User" />
+            <span class="fw-semibold">Ramesh</span>
+        </div>
+        <input type="text" class="form-control w-50" placeholder="Search by products...">
+        <i class="fas fa-bell"></i>
+    </nav>
+    </div>
+<!-- -----------------header----------------------------- -->
+  <div class="main-container-home">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+       <div class="admin-sidebar">
+          <a href="index.html" class="active">  <i class="bi bi-speedometer2 me-2 icon-dashboard"></i> Dashboard</a>
+          <a href="user.html"><i class="bi bi-person-fill icon-dashboard"></i> User</a>
+          <a href="vendor.html"><i class="bi bi-person-bounding-box me-2 icon-dashboard"></i> Vendor</a>
+          <a href="reports.html"><i class="bi bi-bar-chart me-2 icon-dashboard"></i> Reports</a>
+          <a href="notifications.html"><i class="bi bi-bell me-2 icon-dashboard"></i> Notification</a>
+          <a href="settings.html"><i class="bi bi-gear me-2 icon-dashboard"></i> Setting</a>
+        </div>
+          <div class="logout-btn">
+          <button class="btn logout-btn btn btn-dark mt-5">Logout<br><small>Version: 1.0.0.11</small></button>
+        </div>
+      </div>
+
+      <!------------------------------- Main Content ------------------------>
+      <div class="col-md-10 p-4">
+        <div class="filter-bar">
+          <input type="datetime-local" class="filter-btn"></input>
+          <!-- <button class="filter-btn">&#x1F50D; Filter</button> -->
+        </div>
+
+        <div class="cards p-4">
+         <div class="download">
+            <h5 class="mb-4">Report</h5>
+            <button id="exportExcelBtn">
+              <span class="bg-danger text-white p-2 rounded"><i class="bi bi-file-earmark-pdf"></i></span> 
+              <span class="p-2 rounded bg-success text-white"><i class="bi bi-file-earmark-excel"></i></span>
+            </button>
+          </div>
+
+        
+<div class="container py-5">
+  <div class="row text-center mb-5">
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="text-muted mb-1">New Vendor</p>
+          <div class="reports">
+          <h2 class="fw-bold text-dark">156</h2>
+          <p class="text-primary small">+15.03% ↗</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="text-muted mb-1">Sales Increase</p>
+          <div class="reports">
+          <h2 class="fw-bold text-dark">37%</h2>
+          <p class="text-primary small">+15.03% ↗</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p class="text-muted mb-1">Revenue Increase</p>
+          <div class="reports">
+          <h2 class="fw-bold text-dark">38%</h2>
+          <p class="text-primary small">+15.03% ↗</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid">
+      <div class="col-md-10 py-3">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="canvas-box position-relative">
+                 <div class="text-center m-4">
+          <h4 class="ecommerce-sales">Quarterly Pie Chart of Ecommerce Sales</h4>
+        </div>
+              <canvas id="salesPieChart"></canvas>
+              <div class="pie-label label-q1"><i class="fas fa-shopping-cart"></i> Fastest Growth</div>
+              <div class="pie-label label-q2"><i class="fas fa-chart-line"></i> Moderate Sales</div>
+              <div class="pie-label label-q3"><i class="fas fa-clock"></i> Low Activity</div>
+              <div class="pie-label label-q4"><i class="fas fa-gift"></i> Holiday Boost</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+     </div>
+<!-- ---------------------script-------------------- -->
+<script src="assets/js/index.js"></script>
+<!-- Bootstrap icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- Chart Script -->
+  <script>
+    const ctx = document.getElementById('salesPieChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Q1 - 60%', 'Q2 - 15%', 'Q3 - 5%', 'Q4 - 20%'],
+        datasets: [{
+          data: [60, 15, 5, 20],
+          backgroundColor: ['#17c5d3', '#1c2b59', '#ffcc00', '#f44336'],
+          borderColor: '#fff',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'right'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const label = context.label || '';
+                const value = context.raw || 0;
+                const details = {
+                  'Q1 - 60%': 'Fastest Growth Quarter',
+                  'Q2 - 15%': 'Moderate Sales',
+                  'Q3 - 5%': 'Low Activity Period',
+                  'Q4 - 20%': 'Holiday Boost'
+                };
+                return `${label}: ${value}% - ${details[label] || ''}`;
+              }
+            }
+          },
+          datalabels: {
+            formatter: (value, ctx) => `${value}%`,
+            color: '#fff',
+            font: {
+              weight: 'bold',
+              size: 14
+            }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="assets/css/comman.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <div class="body-color">
+        <div class="navbar-top d-flex justify-content-between align-items-center">
+    <nav class="navbar">
+        <div class="d-flex align-items-center topbar-image">
+          <img src="https://i.pravatar.cc/32" alt="User" />
+            <span class="fw-semibold">Ramesh</span>
+        </div>
+        <input type="text" class="form-control w-50" placeholder="Search by products...">
+        <i class="fas fa-bell"></i>
+    </nav>
+    </div>
+<!-- -----------------header----------------------------- -->
+  <div class="main-container-home">
+    <div class="row">
+       <div class="col-md-2 sidebar">
+       <div class="admin-sidebar">
+          <a href="index.html" class="active">  <i class="bi bi-speedometer2 me-2 icon-dashboard"></i> Dashboard</a>
+          <a href="user.html"><i class="bi bi-person-fill icon-dashboard"></i> User</a>
+          <a href="vendor.html"><i class="bi bi-person-bounding-box me-2 icon-dashboard"></i> Vendor</a>
+          <a href="reports.html"><i class="bi bi-bar-chart me-2 icon-dashboard"></i> Reports</a>
+          <a href="notifications.html"><i class="bi bi-bell me-2 icon-dashboard"></i> Notification</a>
+          <a href="settings.html"><i class="bi bi-gear me-2 icon-dashboard"></i> Setting</a>
+        </div>
+          <div class="logout-btn">
+          <button class="btn logout-btn btn btn-dark mt-5">Logout<br><small>Version: 1.0.0.11</small></button>
+        </div>
+      </div>
+
+      <!------------------------------- Main Content ------------------------>
+      <div class="col-md-10 p-4">
+     <div class="filter-bar">
+          <input type="datetime-local" class="filter-btn"></input>
+          <!-- <button class="filter-btn">&#x1F50D; Filter</button> -->
+        </div>
+
+        <!-- <div class="card p-4">
+          <div class="download-btn">
+            <h5 class="mb-4">Vendor Management</h5>
+            <button id="exportExcelBtn" class="btn btn-success mb-4">Download Reports</button>
+          </div> -->
+
+          <div class=" d-flex gap-5 ticket-container">
+  <div class="sales-notifications">
+
+    <div class="notifications">
+         <h3>Sales Notifications</h3>
+    </div>
+     <ul class="nav nav-tabs mb-3" id="notificationTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" type="button" role="tab">Users</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="subvendors-tab" data-bs-toggle="tab" data-bs-target="#subvendors" type="button" role="tab">Sub-Vendors</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="vendors-tab" data-bs-toggle="tab" data-bs-target="#vendors" type="button" role="tab">Vendors</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="notificationTabsContent">
+
+      <!--------------------- Users Tab --------------------------->
+      <div class="tab-pane fade show active" id="users" role="tabpanel">
+        <div class="notification-box">
+          <div class="notification-icon">
+            <img src="assets/images/notification.png" alt="">
+          </div>
+          <div class="notification-content">
+            <h4>New Sales Forecasting Tool</h4>
+            <p>The new sales forecasting tool is here! Check out the latest features and enhance your sales strategy. <br><small>1d</small></p>
+          </div>
+        </div>
+
+        <div class="notification-box">
+        <div class="notification-icon">
+            <img src="assets/images/notification.png" alt="">
+          </div>
+          <div class="notification-content">
+            <h4>Webinar: Advanced Sales Techniques</h4>
+            <p>Join our upcoming webinar on advanced sales techniques. Learn from industry experts and elevate your sales skills. <br><small>2d</small></p>
+          </div>
+        </div>
+
+        <div class="notification-box">
+        <div class="notification-icon">
+            <img src="assets/images/notification.png" alt="">
+          </div>
+          <div class="notification-content">
+            <h4>Sales System Update</h4>
+            <p>We’ve updated our sales system with new features and improved documentation. Explore the changes and streamline your sales process. <br><small>3d</small></p>
+          </div>
+        </div>
+
+        <div class="notification-box">
+        <div class="notification-icon">
+            <img src="assets/images/notification.png" alt="">
+          </div>
+          <div class="notification-content">
+            <h4>Sales Report Approval</h4>
+            <p>Your sales support for the mobile app sales project has been approved. Congratulations on your excellent work! <br><small>4d</small></p>
+          </div>
+        </div>
+
+        <div class="notification-box">
+        <div class="notification-icon">
+            <img src="assets/images/notification.png" alt="">
+          </div>
+          <div class="notification-content">
+            <h4>New Partnership Announcement</h4>
+            <p>We’re excited to announce our new partnership with a leading tech company. This collaboration will bring new opportunities and resources to our sales team. <br><small>5d</small></p>
+          </div>
+        </div>
+
+        <div class="notification-box">
+        <div class="notification-icon">
+            <img src="assets/images/notification.png" alt="">
+          </div>
+          <div class="notification-content">
+            <h4>Sales Challenge Reminder</h4>
+            <p>The deadline for the latest sales challenge is approaching. Submit your entries before the deadline to participate and add cool swag to your sales toolkit. <br><small>6d</small></p>
+          </div>
+        </div>
+
+        <div class="notification-box">
+        <div class="notification-icon">
+            <img src="assets/images/notification.png" alt="">
+          </div>
+          <div class="notification-content">
+            <h4>New Tutorials Available</h4>
+            <p>We’ve added new tutorials and resources to help you get started with our platform. Explore the learning center and enhance your sales skills. <br><small>7d</small></p>
+          </div>
+        </div>
+
+        <div class="create-notification">
+        <button type="button" class="btn btn-primary">
+          Notifications <span class="badge bg-secondary">4</span>
+        </button>
+        </div>
+      </div>
+
+      <!--------------------------- Sub-Vendors Tab -------------------->
+      <div class="tab-pane fade" id="subvendors" role="tabpanel">
+        <div class="notification-box">
+          <div class="notification-icon">SV</div>
+          <div class="notification-content">
+            <h4>Sub-Vendor Onboarding Update</h4>
+            <p>Latest updates for sub-vendor registration and compliance now live. <br><small>2d</small></p>
+          </div>
+        </div>
+      </div>
+
+      <!------------------ Vendors Tab ----------------------->
+      <div class="tab-pane fade" id="vendors" role="tabpanel">
+        <div class="notification-box">
+          <div class="notification-icon">VN</div>
+          <div class="notification-content">
+            <h4>Vendor Feedback Summary</h4>
+            <p>Review the latest vendor feedback for Q3 performance insights. <br><small>3d</small></p>
+          </div>
+        </div>
+      </div>
+</div>
+    </div>
+
+
+
+    <div class="notification-tips">
+        <h4 class="mb-3">Tips</h4>
+        <div class="sales-forecasting">
+            <div class=" d-flex gap-2 align-items-center sales-wabinar">
+                <img src="assets/images/Vector.png" alt="">
+            <div class="forecasting-tool">
+                <h4>Sales Forecasting Tool Tips</h4>
+                <p>Learn how to use the new sales forecasting tool effectively.</p>
+            </div>
+            </div>
+
+           <div class="d-flex gap-2 align-items-center sales-wabinar">
+                <img src="assets/images/Vector.png" alt="">
+            <div class="forecasting-tool">
+                <h4>Sales Webinar Insights</h4>
+                <p>Get insights on advanced sales techniques from industry experts.</p>
+            </div>
+            </div>
+
+            <div class="d-flex gap-2 align-items-center sales-wabinar">
+                <img src="assets/images/Vector.png" alt="">
+            <div class="forecasting-tool">
+                <h4>Sales System Updates</h4>
+                <p>Explore the latest updates and improvements in our sales system.</p>
+            </div>
+            </div>
+
+        </div>
+    </div>
+  <!-- </div> -->
+  
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- ---------------------script-------------------- -->
+<script src="assets/js/index.js"></script>
+<!-- Bootstrap icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
