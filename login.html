@@ -11,6 +11,17 @@
 </head>
 <body>
     <div class="body-color">
+        <div class="navbar-top d-flex justify-content-between align-items-center">
+    <nav class="navbar">
+        <div class="d-flex align-items-center topbar-image">
+          <img src="https://i.pravatar.cc/32" alt="User" />
+            <span class="fw-semibold">Ramesh</span>
+        </div>
+        <input type="text" class="form-control w-50" placeholder="Search by products...">
+        <i class="fas fa-bell"></i>
+    </nav>
+    </div>
+
     <div class="container form-container">
         <div class="row w-100">
             <div class="col-md-6 d-flex justify-content-center mb-4 mb-md-0">
@@ -26,7 +37,9 @@
                      <input type="text" class="form-control mb-2" id="username" placeholder="Name">
                      <label for="password">Password</label>
                      <input type="password" class="form-control mb-2" id="password" placeholder="Password">
-                     <button class="btn btn-dark w-100" type="submit">Login</button>
+                     <label for="code">Two-Factor Authentication Code</label>
+                     <input type="text" class="form-control mb-3" id="code" placeholder="Authentication Code">
+                     <button class="btn btn-dark w-100" onclick="window.location.href='index.html'">Login</button>
                      <div class="text-center forgot-password mt-2">
                        <a href="#">Forgot password?</a>
                      </div>
@@ -39,22 +52,11 @@
 </div>
 
 <script>
-  document.getElementById('login-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    // Get values
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value.trim();
-    const code = document.getElementById('code').value.trim();
-
-    // Check if all fields are filled
-    if (username && password && code) {
-      window.location.href = 'index.html';
-    } else {
-      alert('Please fill in all fields before logging in.');
-    }
+  document.querySelector('.btn').addEventListener('click', function () {
+    window.location.href = 'index.html'; // Redirect to your homepage
   });
 </script>
+
 
 </body>
 </html>
